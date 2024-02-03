@@ -2,6 +2,9 @@ hs*.log
 
 /log-viewer-frontend/node_modules/
 /log-viewer-frontend/.angular/
+.angular
+node_modules
+bin
 
 HELP.md
 target/
@@ -37,4 +40,4 @@ build/
 
 ### VS Code ###
 .vscode/
-demo/.DS_Store
+.DS_Store
