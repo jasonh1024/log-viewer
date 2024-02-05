@@ -28,12 +28,13 @@
 
     <root level="${log-viewer.level:-DEBUG}">
         <appender-ref ref="STDOUT"/>
+        <appender-ref ref="FILE"/>
     </root>
 
-    <logger name="org.eclipse.jetty" level="DEBUG"/>
-    <logger name="com.logviewer.data2.FileWatcherService" level="DEBUG"/>
-    <logger name="com.logviewer.web.session.LogChangeNotifier" level="DEBUG"/>
-    <logger name="com.logviewer.web.WebsocketEmulationController" level="DEBUG"/>
+    <logger name="org.eclipse.jetty" level="WARN"/>
+    <logger name="com.logviewer.data2.FileWatcherService" level="WARN"/>
+    <logger name="com.logviewer.web.session.LogChangeNotifier" level="WARN"/>
+    <logger name="com.logviewer.web.WebsocketEmulationController" level="WARN"/>
     <logger name="com.logviewer.LogViewerMain" level="DEBUG"/>
 
     <logger name="org.springframework.beans.factory.support.DefaultListableBeanFactory" level="WARN" />

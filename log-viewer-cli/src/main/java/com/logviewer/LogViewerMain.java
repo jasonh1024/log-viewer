@@ -207,6 +207,7 @@ public class LogViewerMain {
 
         Configuration ldapConfiguration = createLdapConfig(ldap.toConfig());
 
+
         res.setLoginService(ldapLoginService(ldapConfiguration));
         return res;
     }
@@ -304,7 +305,7 @@ public class LogViewerMain {
                 .collect(Collectors.toMap(Map.Entry::getKey, e -> e.getValue().unwrapped().toString()));
 
         props.put("contextFactory", LogViewerMain.CONTEXT_FACTORY);
-        LOG.debug("ldapParams: {}", props);
+        //LOG.debug("ldapParams: {}", props);
 
         AppConfigurationEntry[] entries = {
                 new AppConfigurationEntry(
