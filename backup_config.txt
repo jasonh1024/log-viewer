@@ -1,0 +1,59 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [  
+    {
+      "type": "java",
+      "name": "LogViewerMain",
+      "request": "launch",
+      "mainClass": "com.logviewer.LogViewerMain",
+      "projectName": "log-viewer-cli",
+      "classPaths": [
+        "${workspaceFolder}/log-viewer-cli/target/log-viewer-1.0.8-SNAPSHOT/lib/log-viewer-cli-1.0.8-SNAPSHOT.jar",
+        "${workspaceFolder}/log-viewer-cli/target/log-viewer-1.0.8-SNAPSHOT/lib/*",
+        "${workspaceFolder}/log-viewer-cli/target/classes",
+        "${workspaceFolder}/log-viewer/target/log-viewer-1.0.8-SNAPSHOT.jar",
+        "${workspaceFolder}/log-viewer/target/classes",
+        "${workspaceFolder}/log-viewer-frontend/target/classes",
+        "${workspaceFolder}/log-viewer-frontend/target/log-viewer-frontend-1.0.8-SNAPSHOT.jar",
+        "${workspaceFolder}/*"
+      ],
+      "sourcePaths": [
+        "${workspaceFolder}/log-viewer-cli/src",
+
+      ],
+      "args": [
+        "-ea",
+        "startup"
+      ],
+      "vmArgs":["-Dlog-viewer.config-file=${workspaceFolder}/log-viewer-cli/target/log-viewer-1.0.8-SNAPSHOT/config.conf"]
+  },{
+    "type": "java",
+    "name": "Current File",
+    "request": "launch",
+    "mainClass": "${file}",
+    "args": [
+      "-ea",
+      "startup"
+    ],
+    "vmArgs":["-Dlog-viewer.config-file=${workspaceFolder}/log-viewer-cli/target/log-viewer-1.0.8-SNAPSHOT/config.conf"],
+    "classPaths": [
+      "${workspaceFolder}/log-viewer-cli/target/classes",
+      "${workspaceFolder}/log-viewer-cli/target/log-viewer-1.0.8-SNAPSHOT/lib/log-viewer-cli-1.0.8-SNAPSHOT.jar",
+      "${workspaceFolder}/log-viewer-cli/target/log-viewer-1.0.8-SNAPSHOT/lib/*",
+      "${workspaceFolder}/log-viewer/target/classes",
+      "${workspaceFolder}/log-viewer-frontend/target/classes",
+      "${workspaceFolder}/*"
+    ]
+  },
+    {
+      "type": "java",
+      "name": "Attach to Remote Program",
+      "request": "attach",
+      "hostName": "localhost",
+      "port": "8111"
+    }
+  ]
+}

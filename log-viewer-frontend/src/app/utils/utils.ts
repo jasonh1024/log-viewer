@@ -82,6 +82,9 @@ export class LvUtils {
         if (style.className) {
             e.classList.add(style.className);
         }
+        if (style.backgroundColor !== undefined) {
+            e.style.backgroundColor = style.backgroundColor;
+        }
     }
 
     static clearElement(e: HTMLElement) {
